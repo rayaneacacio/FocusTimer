@@ -1,0 +1,107 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --backgroundControlsColor: linear-gradient(to right, rgba(156, 39, 185, 0.312), rgba(61, 68, 139, 0.312), rgba(114, 19, 109, 0.553));
+  --buttonsColor: rgba(194, 118, 229, 0.619);
+  font-size: 62.5%;
+}
+
+body{
+  background:rgba(18, 18, 20, 1);
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.6rem;
+
+  height: 65vh;
+}
+
+#displayClock{
+  color: white;
+  font-family: 'Roboto';
+  font-size: 8.8rem;
+  font-weight: bold;
+  line-height: 10.3rem;
+  text-shadow: 2px 2px 2px white;
+
+  margin-right: 3rem;
+  display: flex;
+}
+
+#displayClock div{
+  display: flex;
+}
+
+.hoursDisplay{
+  color: var(--buttonsColor);
+  font-size: 14rem;
+}
+
+#controls{
+  background: var(--backgroundControlsColor);
+  background-size: 500% 100%;
+
+  width: 22.8rem;
+  height: 10.8rem;
+
+  margin-top: 2rem;
+  border-radius: 9999px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+
+  animation-name: backgroundAnimation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.buttonPlay svg path, .buttonPause svg path, .buttonVolumeOn svg path{
+  fill: var(--buttonsColor);
+}
+
+#controls div, footer div{
+  background-size: cover;
+  background-position: center;
+
+  width: 6.4rem;
+  height: 6.4rem;
+
+  cursor: pointer;
+} 
+
+.hide{
+  display: none;
+}
+
+footer{
+  height: 35vh;
+
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+
+  padding-right: 3.2rem;
+  padding-bottom: 4rem;
+}
+
+@keyframes backgroundAnimation{
+  0%{
+    background-position-x: 0%;
+  }
+  100%{
+    background-position-x: 100%;
+  }
+}
